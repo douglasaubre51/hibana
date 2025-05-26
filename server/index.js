@@ -16,7 +16,7 @@ app.listen(
 )
 
 // json middleware
-express.json()
+app.use(express.json())
 
 // connect to neliel (atlas db)
 mongoose
