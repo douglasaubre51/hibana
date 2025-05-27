@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors";
 
 import router from "./routes/auth.route.js";
 
@@ -24,6 +25,9 @@ mongoose
   .catch(() => {
     console.log("error connecting to Neliel cluster!(atlas db)");
   });
+
+// allow cors for all origin
+app.use(cors());
 
 // json middleware
 app.use(express.json());
