@@ -40,30 +40,32 @@ function SignUp() {
   return (
     <>
       <div className={styles.mainContent}>
-        <div className={styles.contentBody}>
-          <div className={styles.headerContainer}>
-            <span>Create an </span>
-            <span>account!</span>
+        <div className={styles.formContainer}>
+
+          <div className={styles.formGroup}>
+            <span>First name</span>
+            <input type="text" id="first-name-box" />
           </div>
 
-          <div className={styles.formContainer}>
-            <span>first name</span>
-            <input type="text" id="first-name-box" />
-
-            <span>last name</span>
+          <div className={styles.formGroup}>
+            <span>Last name</span>
             <input type="text" id="last-name-box" />
+          </div>
 
-            <span>email</span>
+          <div className={styles.formGroup}>
+            <span>Email Id</span>
             <input type="email" id="email-box" />
+          </div>
 
-            <span>password</span>
-            <input type="text" id="password-box" />
+          <div className={styles.formGroup}>
+            <span>Password</span>
+            <input type="password" id="password-box" />
+          </div>
 
-            <div id="btn-container">
-              <button id="submit-btn" onClick={createAccount}>
-                continue
-              </button>
-            </div>
+          <div className={styles.btnContainer}>
+            <button className={styles.submitBtn} onClick={createAccount}>
+              continue
+            </button>
           </div>
         </div>
       </div>
