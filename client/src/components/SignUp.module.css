@@ -1,0 +1,48 @@
+:root {
+  --light-grey: #222222;
+  --light-white: whitesmoke;
+  --white: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.mainContent {
+  background-color: var(--light-white);
+
+  max-width: 400px;
+  min-height: 100vh;
+
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.contentBody {
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
+.headerContainer {
+  font-size: 50px;
+
+  max-height: fit-content;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  max-width: fit-content;
+}
+
+.formContainer span {
+  font-size: 20px;
+}

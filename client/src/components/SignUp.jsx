@@ -1,3 +1,5 @@
+import styles from "./SignUp.module.css";
+
 // sign up logic
 function createAccount() {
   console.log("clicked submit!");
@@ -37,26 +39,31 @@ function createAccount() {
 function SignUp() {
   return (
     <>
-      <div>
-        <h1>Create new account!</h1>
+      <div className={styles.mainContent}>
+        <div className={styles.contentBody}>
+          <div className={styles.headerContainer}>
+            <span>Create an </span>
+            <span>account!</span>
+          </div>
 
-        <div id="form-container">
-          <h3>first name</h3>
-          <input type="text" id="first-name-box" />
+          <div className={styles.formContainer}>
+            <span>first name</span>
+            <input type="text" id="first-name-box" />
 
-          <h3>last name</h3>
-          <input type="text" id="last-name-box" />
+            <span>last name</span>
+            <input type="text" id="last-name-box" />
 
-          <h3>email</h3>
-          <input type="email" id="email-box" />
+            <span>email</span>
+            <input type="email" id="email-box" />
 
-          <h3>password</h3>
-          <input type="text" id="password-box" />
+            <span>password</span>
+            <input type="text" id="password-box" />
 
-          <div id="btn-container">
-            <button id="submit-btn" onClick={createAccount}>
-              continue
-            </button>
+            <div id="btn-container">
+              <button id="submit-btn" onClick={createAccount}>
+                continue
+              </button>
+            </div>
           </div>
         </div>
       </div>
