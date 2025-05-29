@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 // render sign up page!
 const SignUp = function () {
     let [color, setColor] = useState('red')
+    let [value, setValue] = useState('Pdf')
 
     useEffect(
         () => {
@@ -12,14 +13,17 @@ const SignUp = function () {
                 () => {
                     if (color == 'red') {
                         setColor('grey')
+                        setValue('Odt')
                     }
 
                     else if (color == 'grey') {
                         setColor('blue')
+                        setValue('Docx')
                     }
 
                     else if (color == 'blue') {
                         setColor('red')
+                        setValue('Pdf')
                     }
 
                     console.log('el effecto')
@@ -29,7 +33,7 @@ const SignUp = function () {
 
             return () => clearInterval(timer)
         },
-        [color]
+        [color, value]
     )
 
     return (
@@ -42,11 +46,14 @@ const SignUp = function () {
                     <span className={styles.header}>
                         to create
                     </span>
-                    <span className={styles.header} style={{
-                        color: color,
-                        transitionDuration: '.10s'
-                    }}>
-                        documents
+                    <span
+                        className={styles.header}
+                        style={{
+                            color: color,
+                            transitionDuration: '.10s'
+                        }}
+                    >
+                        {value}
                     </span>
                 </div>
 
