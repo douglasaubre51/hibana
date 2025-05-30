@@ -24,13 +24,14 @@
     padding: 20px 30px;
 }
 
-.leftcontainer {}
-
-.rightcontainer {}
-
-.header {
+.header,
+.headerTag {
     display: block;
 
     font-size: 80px;
     font-weight: 1000;
+}
+
+.headerTag {
+    transition-duration: .5s;
 }

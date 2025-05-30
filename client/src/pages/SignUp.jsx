@@ -4,25 +4,29 @@ import { useEffect, useState } from 'react'
 
 // render sign up page!
 const SignUp = function () {
-    let [color, setColor] = useState('red')
+    const blue = '#1b5ebe'
+    const red = '#f40f02'
+    const grey = '#737373'
+
+    let [color, setColor] = useState(red)
     let [value, setValue] = useState('Pdf')
 
     useEffect(
         () => {
             const timer = setInterval(
                 () => {
-                    if (color == 'red') {
-                        setColor('grey')
+                    if (color == red) {
+                        setColor(grey)
                         setValue('Odt')
                     }
 
-                    else if (color == 'grey') {
-                        setColor('blue')
+                    else if (color == grey) {
+                        setColor(blue)
                         setValue('Docx')
                     }
 
-                    else if (color == 'blue') {
-                        setColor('red')
+                    else if (color == blue) {
+                        setColor(red)
                         setValue('Pdf')
                     }
 
@@ -47,10 +51,9 @@ const SignUp = function () {
                         to create
                     </span>
                     <span
-                        className={styles.header}
+                        className={styles.headerTag}
                         style={{
-                            color: color,
-                            transitionDuration: '.10s'
+                            color: color
                         }}
                     >
                         {value}
