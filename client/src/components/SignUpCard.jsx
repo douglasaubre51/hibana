@@ -1,4 +1,4 @@
-import styles from "./SignUpCard.module.css";
+import styles from "../styles/SignUpCard.module.css";
 
 // sign up logic
 function createAccount() {

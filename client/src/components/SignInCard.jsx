@@ -1,4 +1,4 @@
-import styles from './SignInCard.module.css'
+import styles from '../styles/SignInCard.module.css'
 
 // signin logic
 function signIn() {
@@ -11,28 +11,30 @@ const SignInCard = () => {
     return (
         <>
             <div className={styles.mainContent}>
-                <div className={styles.headerContainer}>
-                    <span>
-                        Sign in
-                    </span>
-                </div>
-                <div className={styles.formContainer}>
-                    <div className={styles.formGroup}>
+                <div className={styles.container}>
+                    <div className={styles.headerContainer}>
                         <span>
-                            email
+                            Sign in
                         </span>
-                        <input type='text' id='email-box' />
                     </div>
-                    <div className={styles.formGroup}>
-                        <span>
-                            password
-                        </span>
-                        <input type='password' id='password-box' />
-                    </div>
-                    <div className={styles.btnContainer}>
-                        <button onClick={signIn}>
-                            continue
-                        </button>
+                    <div className={styles.formContainer}>
+                        <div className={styles.formGroup}>
+                            <span>
+                                email
+                            </span>
+                            <input type='text' id='email-box' />
+                        </div>
+                        <div className={styles.formGroup}>
+                            <span>
+                                password
+                            </span>
+                            <input type='password' id='password-box' />
+                        </div>
+                        <div className={styles.btnContainer}>
+                            <button onClick={signIn}>
+                                continue
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

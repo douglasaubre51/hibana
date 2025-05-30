@@ -1,4 +1,4 @@
-import styles from './SignUp.module.css'
+import styles from '../styles/SignUp.module.css'
 import SignUpCard from '../components/SignUpCard.jsx'
 import { useEffect, useState } from 'react'
 
