@@ -102,6 +102,11 @@ input[type='password']:focus {
     color: var(--dark-grey);
 }
 
+.errorMessage {
+    font-size: 10px;
+    color: red;
+}
+
 .btnContainer {
     margin: 20px 0px;
 }

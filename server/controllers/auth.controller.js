@@ -67,6 +67,7 @@ export const signIn = async (req, res) => {
       return res.status(400).json({
         message: "email doesnot exist!",
         success: false,
+        code: 1
       });
     }
 
@@ -76,6 +77,7 @@ export const signIn = async (req, res) => {
       return res.status(400).json({
         message: "invalid password!",
         success: false,
+        code: 2
       });
     }
 
@@ -90,9 +92,10 @@ export const signIn = async (req, res) => {
       process.env.JWT_SECRET,
     );
 
-    return res.status(200).cookie("access_token", token).json({
+    res.status(200).cookie("access_token", token).json({
       message: "user signed in!",
       success: true,
+      userId: rest.id
     });
   } catch (err) {
     return res.status(400).json({
