@@ -1,0 +1,36 @@
+:root {
+    --white: white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::spelling-error {
+    text-decoration: underline red;
+    color: grey;
+}
+
+.container {
+    scale: .8;
+
+    /*width: 793px;
+    height: 1122px;*/
+
+    width: 833px;
+    height: 1162px;
+
+    padding: 40px;
+
+    background-color: var(--white);
+}
+
+.editorCanvas {
+    height: 100%;
+}
+
+.editorCanvas:focus {
+    outline: none;
+}

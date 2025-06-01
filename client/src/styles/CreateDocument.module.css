@@ -1,0 +1,16 @@
+:root {
+    --medium-grey: #d3d3d3;
+    --dark-grey: #43464b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainContent {
+    background-color: var(--dark-grey);
+    width: 100%;
+    height: fit-content;
+}

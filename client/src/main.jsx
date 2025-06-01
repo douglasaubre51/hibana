@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import SignIn from "./pages/SignIn.jsx";
+import { CreateDocument } from './pages/CreateDocument.jsx'
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <SignIn />
+    <CreateDocument />
   </StrictMode>,
 );
