@@ -20,15 +20,19 @@
     height: 1122px;*/
 
     width: 833px;
-    height: 1162px;
+    height: 1132px;
 
     padding: 40px;
 
     background-color: var(--white);
+
+    border-radius: 10px;
 }
 
 .editorCanvas {
-    height: 100%;
+    height: 1052px;
+    max-height: 1052px;
+    overflow: hidden;
 }
 
 .editorCanvas:focus {
